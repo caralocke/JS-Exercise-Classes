@@ -75,7 +75,17 @@ class Airplane {
   */
   
  class Car {
-    
+    constructor(model, milesPerGallon) {
+      this.model = model;
+      this.milesPerGallon = milesPerGallon;
+      this.tank = 0;
+      this.odometer = 0;
+    }
+    fill(gallons){
+      if(this.tank += gallons){
+        console.log(gallons);
+      }
+    }
   }
   
   /*
@@ -90,8 +100,17 @@ class Airplane {
           + Speaking should return a phrase `Hello my name is {name}, I am from {location}`.
           + {name} and {location} of course come from the instance's own properties.
   */
+ 
  class Lambdasian {
+    constructor(obj){
+      this.name = obj.name;
+      this.age = obj.age;
+      this.location = obj.location;
+    }
     
+    speak(){
+      return `Hello my name is ${this.name}, I am from ${this.location}`
+    }
   }
   
   /*
@@ -108,8 +127,14 @@ class Airplane {
           + `demo` receives a `subject` string as an argument and returns the phrase 'Today we are learning about {subject}' where subject is the param passed in.
           + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
   */
- class Instructor {
-
+ class Instructor extends Lambdasian{
+    constructor(teachObj){
+      this.name = teachObj.name;
+      this.age = teachObj.age;
+      this.location = teachObj.location;
+      this.specialty = teachObj.specialty;
+      this.catchphrase = teachObj.catchphrase;
+    }
  }
   /*
     TASK 5
