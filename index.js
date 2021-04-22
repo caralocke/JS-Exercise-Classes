@@ -164,7 +164,7 @@ class Airplane {
           + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
   */
  class Student extends Lambdasian{
-     constructor(studentObj, previousBackground, className, favSubjects){
+     constructor(studentObj){
        super(studentObj);
        this.previousBackground = student.previousBackground;
        this.className = studentObj.className;
@@ -173,6 +173,12 @@ class Airplane {
 
       listSubjects() {
         return `Loving ${this.favSubjects}!`;
+      }
+      PRAssignment(subject){
+        return `${this.name} has submited a PR for ${subject}`
+      }
+      sprintChallenge(subject){
+        return `${this.name} has begun sprint challenge on ${subject}`
       }
  }
   
@@ -189,8 +195,19 @@ class Airplane {
           + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
           + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
   */
- class ProjectManager {
-     
+ class ProjectManager extends Instructor{
+     constructor(managerObj){
+      super(managerObj);
+      this.gradClassName = managerObj.gradClassName;
+      this.favInstructor = managerObj.favInstructor;
+     }
+     standUp(channel){
+       return `${this.name} announces to ${channel}, @channel standy times!`
+     }
+
+     debugsCode(studentObj, subject){
+      returns `${this.name} debugs ${studentObj.name}'s code on ${subject}`
+     }
  }
   /*
     STRETCH PROBLEM (no tests!)
