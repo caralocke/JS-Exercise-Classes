@@ -77,14 +77,21 @@ class Airplane {
  class Car {
     constructor(model, milesPerGallon) {
       this.model = model;
-      this.milesPerGallon = milesPerGallon;
-      this.tank = 0;
-      this.odometer = 0;
+      this.milesPerGallon = milesPerGallon; //16
+      this.tank = 0;//10
+      this.odometer = 0;//160
     }
     fill(gallons){
       if(this.tank += gallons){
         console.log(gallons);
       }
+    }
+    drive(distance){
+      distance = this.odometer;
+      if(this.tank/ this.milesPerGallon > this.odometer){
+        this.tank.push(console.log(`I ran out of fuel at ${this.odometer} miles!`))
+      }
+
     }
   }
   
@@ -129,11 +136,13 @@ class Airplane {
   */
  class Instructor extends Lambdasian{
     constructor(teachObj){
-      this.name = teachObj.name;
-      this.age = teachObj.age;
-      this.location = teachObj.location;
+      super(teachObj);
       this.specialty = teachObj.specialty;
-      this.catchphrase = teachObj.catchphrase;
+      this.favLanguage = teachObj.favLanguage;
+      this.catchPhrase = teachObj.catchPhrase;
+    }
+    demo(subject){
+      return `Today we are learning about ${subject}`
     }
  }
   /*
@@ -151,8 +160,17 @@ class Airplane {
           + `PRAssignment` a method that receives a subject as an argument and returns `student.name has submitted a PR for {subject}`
           + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
   */
- class Student {
-     
+ class Student extends Lambdasian{
+     constructor(studentObj, previousBackground, className, favSubjects){
+       super(studentObj);
+       this.previousBackground = student.previousBackground;
+       this.className = studentObj.className;
+       this.favSubjects = studentObj.favSubjects;     
+      }
+
+      listSubjects() {
+        return `Loving ${this.favSubjects}!`;
+      }
  }
   
   /*
