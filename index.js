@@ -48,9 +48,8 @@ class Airplane {
       this.stomach = [];
     }
     eat(edible){
-      if(this.stomach.length < 10){
+      if(this.stomach.length < 10)
         this.stomach.push(edible);
-      }
     }
     poop(){
       this.stomach = [];
@@ -77,24 +76,24 @@ class Airplane {
  class Car {
     constructor(model, milesPerGallon) {
       this.model = model;
-      this.milesPerGallon = milesPerGallon; //16
-      this.tank = 0;//10
-      this.odometer = 0;//160
+      this.milesPerGallon = milesPerGallon; 
+      this.tank = 0;
+      this.odometer = 0;
     }
     fill(gallons){
-      if(this.tank += gallons){
-        console.log(gallons);
-      }
+      this.tank += gallons;
     }
     drive(distance){
-      if(this.odometer += distance){
-        console.log((distance));
-      } 
-      if(this.tank * this.milesPerGallon > this.odometer){
-        return `I ran out of fuel at ${this.odometer} miles!`
+      if(this.tank < distance / this.milesPerGallon){
+        this.odometer += this.milesPerGallon * this.tank;
+        this.tank = 0;
+        return `I ran out of fuel at ${this.odometer} miles!`;
+      } else {
+        this.tank -= distance / this.milesPerGallon;
+        this.odometer += distance;
       }
     }
-  }
+  };
   
   /*
     TASK 3
