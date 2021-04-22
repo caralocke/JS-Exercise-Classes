@@ -87,11 +87,12 @@ class Airplane {
       }
     }
     drive(distance){
-      distance = this.odometer;
-      if(this.tank/ this.milesPerGallon > this.odometer){
-        this.tank.push(console.log(`I ran out of fuel at ${this.odometer} miles!`))
+      if(this.odometer += distance){
+        console.log((distance));
+      } 
+      if(this.tank * this.milesPerGallon > this.odometer){
+        return `I ran out of fuel at ${this.odometer} miles!`
       }
-
     }
   }
   
