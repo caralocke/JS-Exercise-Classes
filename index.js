@@ -144,6 +144,9 @@ class Airplane {
     demo(subject){
       return `Today we are learning about ${subject}`
     }
+    grade(student, subject){
+      return `${student} receives a perfect score on ${subject}`
+    }
  }
   /*
     TASK 5
