@@ -109,10 +109,10 @@ class Airplane {
   */
  
  class Lambdasian {
-    constructor(obj){
-      this.name = obj.name;
-      this.age = obj.age;
-      this.location = obj.location;
+    constructor(attrs){
+      this.name = attrs.name;
+      this.age = attrs.age;
+      this.location = attrs.location;
     }
     
     speak(){
@@ -135,11 +135,11 @@ class Airplane {
           + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
   */
  class Instructor extends Lambdasian{
-    constructor(teachObj){
-      super(teachObj);
-      this.specialty = teachObj.specialty;
-      this.favLanguage = teachObj.favLanguage;
-      this.catchPhrase = teachObj.catchPhrase;
+    constructor(attrs){
+      super(attrs);
+      this.specialty = attrs.specialty;
+      this.favLanguage = attrs.favLanguage;
+      this.catchPhrase = attrs.catchPhrase;
     }
     demo(subject){
       return `Today we are learning about ${subject}`
@@ -164,11 +164,11 @@ class Airplane {
           + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
   */
  class Student extends Lambdasian{
-     constructor(studentObj){
-       super(studentObj);
-       this.previousBackground = student.previousBackground;
-       this.className = studentObj.className;
-       this.favSubjects = studentObj.favSubjects;     
+     constructor(attrs){
+       super(attrs);
+       this.previousBackground = attrs.previousBackground;
+       this.className = attrs.className;
+       this.favSubjects = attrs.favSubjects;     
       }
 
       listSubjects() {
@@ -196,10 +196,10 @@ class Airplane {
           + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
   */
  class ProjectManager extends Instructor{
-     constructor(managerObj){
-      super(managerObj);
-      this.gradClassName = managerObj.gradClassName;
-      this.favInstructor = managerObj.favInstructor;
+     constructor(attrs){
+      super(attrs);
+      this.gradClassName = attrs.gradClassName;
+      this.favInstructor = attrs.favInstructor;
      }
      standUp(channel){
        return `${this.name} announces to ${channel}, @channel standy times!`
