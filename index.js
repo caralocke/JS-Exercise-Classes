@@ -145,7 +145,7 @@ class Airplane {
       return `Today we are learning about ${subject}`
     }
     grade(student, subject){
-      return `${student} receives a perfect score on ${subject}`
+      return `${student.name} receives a perfect score on ${subject}`
     }
  }
   /*
@@ -175,7 +175,7 @@ class Airplane {
         return `Loving ${this.favSubjects}!`;
       }
       PRAssignment(subject){
-        return `${this.name} has submited a PR for ${subject}`
+        return `${this.name} has submitted a PR for ${subject}`
       }
       sprintChallenge(subject){
         return `${this.name} has begun sprint challenge on ${subject}`
@@ -205,8 +205,8 @@ class Airplane {
        return `${this.name} announces to ${channel}, @channel standy times!`
      }
 
-     debugsCode(studentObj, subject){
-      returns `${this.name} debugs ${studentObj.name}'s code on ${subject}`
+     debugsCode(student, subject){
+      return `${this.name} debugs ${student.name}'s code on ${subject}`
      }
  }
   /*
